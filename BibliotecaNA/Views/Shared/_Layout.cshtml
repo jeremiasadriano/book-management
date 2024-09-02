@@ -1,39 +1,85 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Store</title>
+    <title>Sidebar 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        a{
-            font-family:Verdana, Geneva, Tahoma, sans-serif
+        a {
+            all: unset;
+        }
+
+        .wrapper {
+            height: 100dvh;
+            width: 100dvw;
+        }
+
+        #sidebar {
+            width: 20%;
         }
     </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"> Book Store</a>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a href="/Genre/Add" class="nav-link">Genre</a>
-            </li>
-            <li class="nav-item">
-                <a href="/Author/Add" class="nav-link">Author</a>
-            </li>
-            <li class="nav-item active">
-                <a href="/Publisher/Add" class="nav-link">Publisher</a>
-            </li>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="bg-dark">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle">Home</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Home 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle">Pages</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
 
-            <li class="nav-item">
-                <a href="/Book/Add" class="nav-link">Book</a>
-            </li>
-        </ul>
+            </div>
+        </nav>
 
-    </nav>
-    <div class="container">
-        @RenderBody()
+        <div id="content" class="p-4 p-md-5">
+            <h2 class="mb-4">Sidebar #01</h2>
+            @RenderBody()
+        </div>
     </div>
 </body>
+
 </html>
