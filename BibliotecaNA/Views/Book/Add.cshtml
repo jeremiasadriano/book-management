@@ -5,37 +5,37 @@
 <div class="container pt-5">
     <div class="row">
         <div class="col-md-6">
-            <h3>Add Book</h3>
-            <form asp-action="Add" method="post">
+            <h3>Adicionar livros</h3>
+            <form asp-action="Add" method="post" class="d-flex flex-column gap-4">
                 <div class="form-group">
-                    <label asp-for="Title">Title *</label>
+                    <label asp-for="Title">Título *</label>
                     <input type="text" class="form-control" asp-for="Title" />
                     <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="GenreId">Genre *</label>
+                    <label asp-for="GenreId">Gênero *</label>
                     <select asp-for="GenreId" asp-items="Model.GenreList" class="form-control">
                         <option value="">--select--</option>
                     </select>
                     <span asp-validation-for="GenreId" class="text-danger"></span>
                 </div>
 
-                 <div class="form-group">
+                <div class="form-group">
                     <label asp-for="Isbn">Isbn *</label>
                     <input type="text" class="form-control" asp-for="Isbn" />
                     <span asp-validation-for="Isbn" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="TotalPages">Total Pages *</label>
+                    <label asp-for="TotalPages">Número de páginas *</label>
                     <input type="number" class="form-control" asp-for="TotalPages" />
                     <span asp-validation-for="TotalPages" class="text-danger"></span>
                 </div>
 
 
                 <div class="form-group">
-                    <label asp-for="AuthorId">Author *</label>
+                    <label asp-for="AuthorId">Autor *</label>
                     <select asp-for="AuthorId" asp-items="Model.AuthorList" class="form-control">
                         <option value="">--select--</option>
                     </select>
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Title">Publisher *</label>
+                    <label asp-for="Title">Editora *</label>
                     <select asp-for="PubhlisherId" asp-items="Model.PublisherList" class="form-control">
                         <option value="">--select--</option>
                     </select>
@@ -56,13 +56,12 @@
                         @TempData["msg"]
                     </div>
                 }
-                <div class="form-group pt-3">
-                    <button type="submit" class="btn btn-dark"><i class="bi bi-save"></i> Save</button>
-                    <a href="/Book/GetAll" class="btn btn-primary"> <i class="bi bi-list"></i>List</a>
+                <div class="form-group pt-3 d-flex gap-4">
+                    <button type="submit" class="btn btn-dark"><i class="bi bi-save"></i> Adicionar</button>
+                    <a href="/Book/GetAll" class="btn btn-primary"> <i class="bi bi-list"></i>Listar livros</a>
                 </div>
 
             </form>
         </div>
     </div>
 </div>
-

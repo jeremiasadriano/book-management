@@ -5,43 +5,44 @@
 <div class="container pt-3">
     <div class="row">
         <div class="col-md-12">
-            <a class="btn btn-dark" href="/Book/Add">+ Add more</a>
+            <a class="btn btn-dark" href="/Book/Add">Adicionar mais livros</a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h3>Books</h3>
+            <h3>Livros</h3>
 
-            <table  class="table table-stripped table-bordered table-dark">
+            <table class="table table-stripped table-bordered table-dark">
                 <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Genre</th>
+                        <th>Título</th>
+                        <th>Gênero</th>
                         <th>Isbn</th>
-                        <th>Total Pages</th>
-                        <th>Author</th>
-                        <th>Publisher</th>
-                        <th>Action</th>
+                        <th>Número de páginas</th>
+                        <th>Autor</th>
+                        <th>Editora</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach(var item in Model){
-                    <tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
                             <td>@item.Title</td>
                             <td>@item.GenreName</td>
                             <td>@item.Isbn</td>
                             <td>@item.TotalPages</td>
                             <td>@item.AuthorName</td>
                             <td>@item.PublisherName</td>
-                        <td>
+                            <td>
                                 <a class="btn btn-success" href="/Book/Update?id=@item.Id"><i class="bi bi-pen"></i></a> |
-                                <a class="btn btn-danger" onclick="return window.confirm('Are you sure?')" href="/Book/Delete?id=@item.Id"><i class="bi bi-trash"></i></a>
-                        </td>
-                    </tr>
+                                <a class="btn btn-danger" onclick="return window.confirm('Are you sure?')"
+                                    href="/Book/Delete?id=@item.Id"><i class="bi bi-trash"></i></a>
+                            </td>
+                        </tr>
                     }
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-
