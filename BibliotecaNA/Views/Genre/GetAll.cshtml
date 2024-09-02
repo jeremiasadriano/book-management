@@ -24,9 +24,9 @@
                     {
                         <tr>
                             <td>@item.Name</td>
-                            <td>
+                            <td class="d-flex gap-4">
                                 <a class="btn btn-success" href="/Genre/Update?id=@item.Id"><i class="bi bi-pen"></i>
-                                    Editar</a> |
+                                    Editar</a>
                                 <a class="btn btn-danger"
                                     onclick="return window.confirm('Tem a certeza de deseja remover este gênero?')"
                                     href="/Genre/Delete?id=@item.Id"><i class="bi bi-trash"></i> Remover</a>
