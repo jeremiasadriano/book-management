@@ -5,7 +5,7 @@
 <div class="container pt-5">
     <div class="row">
         <div class="col-md-6">
-            <a class="btn btn-dark" href="/Publisher/Add">Adicionar mais editoras</a>
+            <a class="btn btn-dark" href="/Editora/Add">Adicionar mais editoras</a>
         </div>
     </div>
     <div class="row">
@@ -23,13 +23,13 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@item.PublisherName</td>
+                            <td>@item.Ed</td>
                             <td>
-                                <a class="btn btn-success" href="/Publisher/Update?id=@item.Id"><i class="bi bi-pen"></i>
+                                <a class="btn btn-success" href="/Editora/Update?id=@item.Id"><i class="bi bi-pen"></i>
                                     Editar</a> |
                                 <a class="btn btn-danger"
                                     onclick="return window.confirm('Tem a certeza que deseja remover?')"
-                                    href="/Publisher/Delete?id=@item.Id"><i class="bi bi-trash"></i> Remover</a>
+                                    href="/Editora/Delete?id=@item.Id"><i class="bi bi-trash"></i> Remover</a>
                             </td>
                         </tr>
                     }
