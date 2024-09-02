@@ -1,4 +1,4 @@
-﻿@model BibliotecaNA.Models.Domain.Book
+﻿@model BibliotecaNA.Models.Domain.Livro
 @{
 }
 
@@ -20,7 +20,7 @@
                     <select asp-for="GenreId" asp-items="Model.GenreList" class="form-control">
                         <option value="">--select--</option>
                     </select>
-                    <span asp-validation-for="GenreId" class="text-danger"></span>
+                    <span asp-validation-for="IdGenero" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
@@ -41,7 +41,7 @@
                     <select asp-for="AuthorId" asp-items="Model.AuthorList" class="form-control">
                         <option value="">--select--</option>
                     </select>
-                    <span asp-validation-for="AuthorId" class="text-danger"></span>
+                    <span asp-validation-for="IdAutor" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
@@ -49,7 +49,7 @@
                     <select asp-for="PubhlisherId" asp-items="Model.PublisherList" class="form-control">
                         <option value="">--select--</option>
                     </select>
-                    <span asp-validation-for="PubhlisherId" class="text-danger"></span>
+                    <span asp-validation-for="IdEditora" class="text-danger"></span>
                 </div>
 
                 @if (TempData["msg"] != null)

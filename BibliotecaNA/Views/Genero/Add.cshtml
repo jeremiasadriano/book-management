@@ -1,13 +1,12 @@
-﻿@model BibliotecaNA.Models.Domain.Author
+﻿@model BibliotecaNA.Models.Domain.Genero
 @{
 }
 
 <div class="container pt-5">
     <div class="row">
         <div class="col-md-6">
-            <h3>Atualizar autores</h3>
-            <form asp-action="Update" method="post">
-                <input type="hidden" asp-for="Id" />
+            <h3>Adicionar Autores</h3>
+            <form asp-action="Add" method="post">
                 <div class="form-group">
                     <label asp-for="AuthorName">Nome do autor *</label>
                     <input type="text" class="form-control" asp-for="AuthorName" />
